@@ -100,4 +100,5 @@ npx playwright show-report
 QA Engineer con 5 años de experiencia en testing manual y en proceso de especialización en automatización. Este portfolio refleja mi aprendizaje y crecimiento en el área de automatización de pruebas.
 
 📧 [maller.arg@gmail.com]
-💼 [http://linkedin.com/maria-aller]
+
+💼 [http://linkedin.com/maria-aller](https://www.linkedin.com/in/maria-aller/]
