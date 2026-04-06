@@ -1,0 +1,29 @@
+{
+  "name": "mi-portfolio-qa",
+  "version": "1.0.0",
+  "description": "Portfolio con proyectos de automatización",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maller993/mi-portfolio-qa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maller993/mi-portfolio-qa/issues"
+  },
+  "homepage": "https://github.com/maller993/mi-portfolio-qa#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2",
+    "typescript": "^6.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.1"
+  }
+}
