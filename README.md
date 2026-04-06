@@ -10,6 +10,7 @@ Portfolio personal de automatización de pruebas de APIs REST, desarrollado con 
 - **JSONPlaceholder** - API REST pública utilizada para las pruebas
 
 ## 📁 Estructura del proyecto
+```
 mi-portfolio-qa/
 ├── helpers/
 │   └── api-helper.ts        # Helper reutilizable para llamadas HTTP
@@ -20,9 +21,10 @@ mi-portfolio-qa/
 │           ├── post-users.api.spec.ts
 │           ├── put-users.api.spec.ts
 │           └── delete-users.api.spec.ts
-├── .env.example             # Variables de entorno de ejemplo
-├── playwright.config.ts     # Configuración de Playwright
-└── tsconfig.json            # Configuración de TypeScript
+├── .env.example
+├── playwright.config.ts
+└── tsconfig.json
+```
 
 
 ## ⚙️ Instalación
