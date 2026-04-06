@@ -101,4 +101,4 @@ QA Engineer con 5 años de experiencia en testing manual y en proceso de especia
 
 📧 [maller.arg@gmail.com]
 
-💼 [http://linkedin.com/maria-aller](https://www.linkedin.com/in/maria-aller/]
+💼 [http://linkedin.com/maria-aller]]
