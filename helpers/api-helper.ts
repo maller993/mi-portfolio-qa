@@ -35,6 +35,13 @@ export class ApiHelper {
     });
   }
 
+  async put(endpoint: string, body: any, options?: any): Promise<APIResponse> {
+  return this.request.put(`${this.baseURL}${endpoint}`, {
+    headers: this.getHeaders(options?.headers),
+    data: body,
+  });
+}
+
   async delete(endpoint: string, options?: any): Promise<APIResponse> {
     return this.request.delete(`${this.baseURL}${endpoint}`, {
       headers: this.getHeaders(options?.headers),
