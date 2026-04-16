@@ -2,7 +2,8 @@
 
 [![Playwright API Tests](https://github.com/maller993/mi-portfolio-qa/actions/workflows/playwright.yml/badge.svg)](https://github.com/maller993/mi-portfolio-qa/actions)
 
-**María Aller** · QA Automation Engineer (SSR+)**
+**María Aller** · QA Automation Engineer (SSR+)
+QA enfocada en testing de APIs y automatización mobile, con experiencia en diseño de estrategias de testing y detección de bugs críticos.
 
 [LinkedIn](https://www.linkedin.com/in/maria-aller/) · maller.arg@gmail.com
 
@@ -45,6 +46,15 @@ mi-portfolio-qa/
 ├── playwright.config.ts
 └── tsconfig.json
 ```
+---
+
+## 🚀 CI/CD
+
+Los tests se ejecutan automáticamente en cada push mediante GitHub Actions, permitiendo detectar errores de forma temprana y asegurar la estabilidad de la API.
+
+Podés ver el estado actual del pipeline acá:
+
+[![Playwright API Tests](https://github.com/maller993/mi-portfolio-qa/actions/workflows/playwright.yml/badge.svg)](https://github.com/maller993/mi-portfolio-qa/actions)
 
 ---
 
@@ -120,13 +130,4 @@ npx playwright show-report
 > Flujos E2E sobre app Android: login, navegación, formularios y validación visual en múltiples dispositivos.  
 > *(repositorio próximamente)*
 
----
 
-## Sobre mí
-
-QA Engineer con más de 5 años de experiencia en testing, especializada en automatización de APIs y mobile.  
-Trabajo con **Playwright** para testing de endpoints REST y con **Maestro** para automatización de apps Android, incorporando IA como herramienta para acelerar generación de casos y cobertura de regresión.
-
-Me enfoco en calidad end-to-end: desde el diseño de estrategias de testing hasta el análisis de bugs críticos y casos borde.
-
-[LinkedIn](https://www.linkedin.com/in/maria-aller/) · maller.arg@gmail.com
