@@ -1,19 +1,36 @@
-# 🧪 Mi Portfolio QA - Automatización de APIs
+# QA Automation Portfolio — API Testing with Playwright
 
-Portfolio personal de automatización de pruebas de APIs REST, desarrollado con Playwright y TypeScript.
+**María Aller** · QA Automation Engineer (SSR+)  
+[LinkedIn](https://www.linkedin.com/in/maria-aller/) · maller.arg@gmail.com
 
-## 🚀 Tecnologías utilizadas
+---
 
-- **Playwright** - Framework de automatización de pruebas
-- **TypeScript** - Lenguaje de programación
-- **Node.js** - Entorno de ejecución
-- **JSONPlaceholder** - API REST pública utilizada para las pruebas
+## Sobre este proyecto
 
-## 📁 Estructura del proyecto
+Portfolio de automatización de pruebas de APIs REST, construido con **Playwright + TypeScript**.  
+Cubre el ciclo CRUD completo del recurso `/users` contra [JSONPlaceholder](https://jsonplaceholder.typicode.com/), incluyendo casos felices, flujos negativos y validación de esquemas de respuesta.
+
+El foco está en escribir tests mantenibles, con helpers reutilizables y una estructura que escala.
+
+---
+
+## Stack
+
+| Herramienta | Rol |
+|---|---|
+| Playwright | Framework de automatización (API testing) |
+| TypeScript | Tipado estático y mejor DX |
+| Node.js | Entorno de ejecución |
+| JSONPlaceholder | API pública de pruebas |
+
+---
+
+## Estructura del proyecto
+
 ```
 mi-portfolio-qa/
 ├── helpers/
-│   └── api-helper.ts        # Helper reutilizable para llamadas HTTP
+│   └── api-helper.ts        # Cliente HTTP reutilizable (baseURL, headers, auth)
 ├── tests/
 │   └── api/
 │       └── Users/
@@ -26,79 +43,87 @@ mi-portfolio-qa/
 └── tsconfig.json
 ```
 
+---
 
-## ⚙️ Instalación
+## Instalación y ejecución
 
-1. Clonar el repositorio
 ```bash
+# 1. Clonar e instalar
 git clone https://github.com/maller993/mi-portfolio-qa.git
 cd mi-portfolio-qa
-```
-
-2. Instalar dependencias
-```bash
 npm install
-```
 
-3. Instalar browsers de Playwright
-```bash
-npx playwright install
-```
-
-4. Configurar variables de entorno
-```bash
+# 2. Variables de entorno
 cp .env.example .env
-```
 
-## ▶️ Correr los tests
-
-Correr todos los tests:
-```bash
+# 3. Correr todos los tests
 npx playwright test
-```
 
-Correr un archivo específico:
-```bash
+# 4. Correr un archivo específico
 npx playwright test tests/api/Users/get-users.api.spec.ts
-```
 
-Ver reporte HTML:
-```bash
+# 5. Ver reporte HTML
 npx playwright show-report
 ```
 
-## 📋 Casos de prueba
+---
 
-### Users - GET /users
-| ID | Descripción | Resultado esperado |
+## Casos de prueba
+
+### GET /users
+
+| ID | Escenario | Status esperado |
 |---|---|---|
-| CP001 | Obtener lista de usuarios y validar estructura | 200 |
+| CP001 | Obtener lista completa y validar estructura del array | 200 |
 | CP002 | Obtener usuario por ID válido | 200 |
-| CP003 | Obtener usuario inexistente | 404 |
+| CP003 | Solicitar usuario con ID inexistente | 404 |
 
-### Users - POST /users
-| ID | Descripción | Resultado esperado |
+### POST /users
+
+| ID | Escenario | Status esperado |
 |---|---|---|
-| CP001 | Crear usuario con datos válidos | 201 |
-| CP002 | Crear usuario sin nombre | 201 |
-| CP003 | Crear usuario con body vacío | 201 |
+| CP001 | Crear usuario con todos los campos válidos | 201 |
+| CP002 | Crear usuario omitiendo campo `name` | 201 |
+| CP003 | Crear usuario con body vacío (caso borde) | 201 |
 
-### Users - PUT /users/{id}
-| ID | Descripción | Resultado esperado |
+### PUT /users/{id}
+
+| ID | Escenario | Status esperado |
 |---|---|---|
-| CP001 | Actualizar usuario con datos válidos | 200 |
-| CP002 | Actualizar usuario inexistente | 200/500 |
+| CP001 | Actualizar usuario existente con datos válidos | 200 |
+| CP002 | Intentar actualizar usuario inexistente | 200 / 500 |
 
-### Users - DELETE /users/{id}
-| ID | Descripción | Resultado esperado |
+### DELETE /users/{id}
+
+| ID | Escenario | Status esperado |
 |---|---|---|
 | CP001 | Eliminar usuario existente | 200 |
-| CP002 | Eliminar usuario inexistente | 200 |
+| CP002 | Intentar eliminar usuario inexistente | 200 |
 
-## 👩‍💻 Sobre mí
+---
 
-QA Engineer con 5 años de experiencia en testing manual y en proceso de especialización en automatización. Este portfolio refleja mi aprendizaje y crecimiento en el área de automatización de pruebas.
+## Decisiones de diseño
 
-📧 [maller.arg@gmail.com]
+- **`api-helper.ts`** centraliza la configuración HTTP para evitar repetir baseURL, headers y manejo de errores en cada test.
+- Los tests están organizados por **recurso + verbo HTTP**, lo que facilita la navegación y el mantenimiento a medida que crece la suite.
+- Se usan **variables de entorno** para la configuración sensible (base URL, credenciales), pensando en integración con CI/CD.
+- Cada spec cubre tanto el **happy path** como **casos negativos y de borde**, porque los bugs críticos suelen vivir ahí.
 
-💼 [https://www.linkedin.com/in/maria-aller/]
+---
+
+## Otros proyectos
+
+> **Automatización mobile con Maestro + Android Studio**  
+> Flujos E2E sobre app Android: login, navegación, formularios y validación visual en múltiples dispositivos.  
+> *(repositorio próximamente)*
+
+---
+
+## Sobre mí
+
+QA Engineer con más de 5 años de experiencia en testing, especializada en automatización de APIs y mobile.  
+Trabajo con **Playwright** para testing de endpoints REST y con **Maestro** para automatización de apps Android, incorporando IA como herramienta para acelerar generación de casos y cobertura de regresión.
+
+Me enfoco en calidad end-to-end: desde el diseño de estrategias de testing hasta el análisis de bugs críticos y casos borde.
+
+[LinkedIn](https://www.linkedin.com/in/maria-aller/) · maller.arg@gmail.com
