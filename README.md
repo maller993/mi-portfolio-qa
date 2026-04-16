@@ -2,7 +2,8 @@
 
 [![Playwright API Tests](https://github.com/maller993/mi-portfolio-qa/actions/workflows/playwright.yml/badge.svg)](https://github.com/maller993/mi-portfolio-qa/actions)
 
-**María Aller** · QA Automation Engineer (SSR+)  
+**María Aller** · QA Automation Engineer (SSR+)**
+
 [LinkedIn](https://www.linkedin.com/in/maria-aller/) · maller.arg@gmail.com
 
 ---
